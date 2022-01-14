@@ -1,0 +1,3 @@
+SavingPath,../../../Program Files/
+BaseUrl,http://182.180.162.103:8090/
+UsersBasePath,../../Users/
