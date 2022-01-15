@@ -200,6 +200,7 @@ namespace SpikoDesktop
                     }
                     else
                     {
+                        CrdentialsLabel.AutoSize = true;
                         CrdentialsLabel.Visible = true;
                         ActiveFocus();
                     }

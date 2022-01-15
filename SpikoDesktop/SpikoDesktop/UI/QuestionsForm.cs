@@ -38,8 +38,11 @@ namespace SpikoDesktop
         ////[Obsolete]
         public QuestionsForm()
         {
+
             Logger.log.Info("Inside question form constructor");
             InitializeComponent();
+
+            AutoSizing();
             NetworkChange.NetworkAvailabilityChanged += new NetworkAvailabilityChangedEventHandler((sender, e) => AvailabilityChangedCallback(sender, e));
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
@@ -88,6 +91,18 @@ namespace SpikoDesktop
                 WifiStatusPanel.BackColor = Color.FromArgb(255, 4, 0);
                 //synth.Speak("Network is not available");
             }
+        }
+
+        private void AutoSizing()
+        {
+            TimeLabel.AutoSize = true;
+            MarkesLabel.AutoSize = true;
+            qMarks.AutoSize = true;
+            txtResult.AutoSize = true;
+            QuestionTypeLabel.AutoSize = true;
+            QuestionCounterLabel.AutoSize = true;
+            QuesInfoLabel.AutoSize = true;
+            QueueLabel.AutoSize = true;
         }
 
         private void videoCaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)

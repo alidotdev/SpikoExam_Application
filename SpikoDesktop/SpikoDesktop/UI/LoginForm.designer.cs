@@ -304,7 +304,7 @@ namespace SpikoDesktop
             this.CrdentialsLabel.Size = new System.Drawing.Size(176, 28);
             this.CrdentialsLabel.TabIndex = 14;
             this.CrdentialsLabel.Text = "Wrong Crdentials !!!";
-            this.CrdentialsLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.CrdentialsLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.CrdentialsLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // ControlPanel

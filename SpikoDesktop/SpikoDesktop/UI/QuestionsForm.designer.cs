@@ -32,14 +32,14 @@ namespace SpikoDesktop
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuestionsForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtAnswer = new System.Windows.Forms.RichTextBox();
             this.TitlePanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.WifiStatusPanel = new System.Windows.Forms.Panel();
@@ -48,7 +48,7 @@ namespace SpikoDesktop
             this.TitlePictureBox = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.TimerPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.qMarks = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.MarkesLabel = new Bunifu.UI.WinForms.BunifuLabel();
             this.BottomLineTimerSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
             this.txtResult = new Bunifu.UI.WinForms.BunifuLabel();
             this.TimeLabel = new Bunifu.UI.WinForms.BunifuLabel();
@@ -71,7 +71,7 @@ namespace SpikoDesktop
             this.SubmitExamButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.DirectQuestionButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.directQuesTextBox = new System.Windows.Forms.TextBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.QueueLabel = new Bunifu.UI.WinForms.BunifuLabel();
             this.LastQuestionButton = new System.Windows.Forms.Button();
             this.NextQuestionButton = new System.Windows.Forms.Button();
             this.PreviousQuestionButton = new System.Windows.Forms.Button();
@@ -137,7 +137,7 @@ namespace SpikoDesktop
             this.WifiStatusPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.WifiStatusPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.WifiStatusPanel.Location = new System.Drawing.Point(1228, 15);
-            this.WifiStatusPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.WifiStatusPanel.Margin = new System.Windows.Forms.Padding(4);
             this.WifiStatusPanel.Name = "WifiStatusPanel";
             this.WifiStatusPanel.Size = new System.Drawing.Size(23, 17);
             this.WifiStatusPanel.TabIndex = 3;
@@ -163,7 +163,7 @@ namespace SpikoDesktop
             this.TitleLabel.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.TitleLabel.ForeColor = System.Drawing.Color.Black;
             this.TitleLabel.Location = new System.Drawing.Point(457, 46);
-            this.TitleLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TitleLabel.Margin = new System.Windows.Forms.Padding(4);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TitleLabel.Size = new System.Drawing.Size(394, 45);
@@ -181,7 +181,7 @@ namespace SpikoDesktop
             this.TitlePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("TitlePictureBox.Image")));
             this.TitlePictureBox.IsCircle = true;
             this.TitlePictureBox.Location = new System.Drawing.Point(292, 4);
-            this.TitlePictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TitlePictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.TitlePictureBox.Name = "TitlePictureBox";
             this.TitlePictureBox.Size = new System.Drawing.Size(135, 135);
             this.TitlePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,14 +198,14 @@ namespace SpikoDesktop
             this.TimerPanel.BorderRadius = 3;
             this.TimerPanel.BorderThickness = 1;
             this.TimerPanel.Controls.Add(this.qMarks);
-            this.TimerPanel.Controls.Add(this.bunifuLabel4);
+            this.TimerPanel.Controls.Add(this.MarkesLabel);
             this.TimerPanel.Controls.Add(this.BottomLineTimerSeparator);
             this.TimerPanel.Controls.Add(this.txtResult);
             this.TimerPanel.Controls.Add(this.TimeLabel);
             this.TimerPanel.Controls.Add(this.TopLineTimerSeparator);
             this.TimerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TimerPanel.Location = new System.Drawing.Point(0, 130);
-            this.TimerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TimerPanel.Margin = new System.Windows.Forms.Padding(4);
             this.TimerPanel.Name = "TimerPanel";
             this.TimerPanel.ShowBorders = true;
             this.TimerPanel.Size = new System.Drawing.Size(1285, 71);
@@ -219,7 +219,7 @@ namespace SpikoDesktop
             this.qMarks.CursorType = null;
             this.qMarks.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.qMarks.Location = new System.Drawing.Point(1137, 25);
-            this.qMarks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.qMarks.Margin = new System.Windows.Forms.Padding(4);
             this.qMarks.Name = "qMarks";
             this.qMarks.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.qMarks.Size = new System.Drawing.Size(12, 30);
@@ -228,23 +228,23 @@ namespace SpikoDesktop
             this.qMarks.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.qMarks.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuLabel4
+            // MarkesLabel
             // 
-            this.bunifuLabel4.AllowParentOverrides = false;
-            this.bunifuLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.bunifuLabel4.Location = new System.Drawing.Point(1045, 25);
-            this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(64, 30);
-            this.bunifuLabel4.TabIndex = 4;
-            this.bunifuLabel4.Text = "Marks: ";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.MarkesLabel.AllowParentOverrides = false;
+            this.MarkesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MarkesLabel.AutoEllipsis = false;
+            this.MarkesLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.MarkesLabel.CursorType = System.Windows.Forms.Cursors.Default;
+            this.MarkesLabel.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.MarkesLabel.Location = new System.Drawing.Point(1045, 25);
+            this.MarkesLabel.Margin = new System.Windows.Forms.Padding(4);
+            this.MarkesLabel.Name = "MarkesLabel";
+            this.MarkesLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MarkesLabel.Size = new System.Drawing.Size(64, 30);
+            this.MarkesLabel.TabIndex = 4;
+            this.MarkesLabel.Text = "Marks: ";
+            this.MarkesLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.MarkesLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // BottomLineTimerSeparator
             // 
@@ -257,7 +257,7 @@ namespace SpikoDesktop
             this.BottomLineTimerSeparator.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.RightEdgeFaded;
             this.BottomLineTimerSeparator.LineThickness = 2;
             this.BottomLineTimerSeparator.Location = new System.Drawing.Point(0, 54);
-            this.BottomLineTimerSeparator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BottomLineTimerSeparator.Margin = new System.Windows.Forms.Padding(5);
             this.BottomLineTimerSeparator.Name = "BottomLineTimerSeparator";
             this.BottomLineTimerSeparator.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.BottomLineTimerSeparator.Size = new System.Drawing.Size(1285, 17);
@@ -270,7 +270,7 @@ namespace SpikoDesktop
             this.txtResult.CursorType = null;
             this.txtResult.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.txtResult.Location = new System.Drawing.Point(135, 25);
-            this.txtResult.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtResult.Margin = new System.Windows.Forms.Padding(4);
             this.txtResult.Name = "txtResult";
             this.txtResult.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtResult.Size = new System.Drawing.Size(82, 30);
@@ -287,7 +287,7 @@ namespace SpikoDesktop
             this.TimeLabel.CursorType = System.Windows.Forms.Cursors.Default;
             this.TimeLabel.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.TimeLabel.Location = new System.Drawing.Point(28, 25);
-            this.TimeLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TimeLabel.Margin = new System.Windows.Forms.Padding(4);
             this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TimeLabel.Size = new System.Drawing.Size(95, 30);
@@ -307,7 +307,7 @@ namespace SpikoDesktop
             this.TopLineTimerSeparator.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.LeftEdgeFaded;
             this.TopLineTimerSeparator.LineThickness = 2;
             this.TopLineTimerSeparator.Location = new System.Drawing.Point(0, 0);
-            this.TopLineTimerSeparator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TopLineTimerSeparator.Margin = new System.Windows.Forms.Padding(5);
             this.TopLineTimerSeparator.Name = "TopLineTimerSeparator";
             this.TopLineTimerSeparator.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.TopLineTimerSeparator.Size = new System.Drawing.Size(1285, 17);
@@ -327,7 +327,7 @@ namespace SpikoDesktop
             this.QuestionTypeAndCounterPanel.Controls.Add(this.QuestionCounterLabel);
             this.QuestionTypeAndCounterPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.QuestionTypeAndCounterPanel.Location = new System.Drawing.Point(0, 201);
-            this.QuestionTypeAndCounterPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.QuestionTypeAndCounterPanel.Margin = new System.Windows.Forms.Padding(4);
             this.QuestionTypeAndCounterPanel.Name = "QuestionTypeAndCounterPanel";
             this.QuestionTypeAndCounterPanel.ShowBorders = true;
             this.QuestionTypeAndCounterPanel.Size = new System.Drawing.Size(1285, 55);
@@ -352,7 +352,7 @@ namespace SpikoDesktop
             this.QuestionTypeLabel.CursorType = null;
             this.QuestionTypeLabel.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.QuestionTypeLabel.Location = new System.Drawing.Point(16, 18);
-            this.QuestionTypeLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.QuestionTypeLabel.Margin = new System.Windows.Forms.Padding(4);
             this.QuestionTypeLabel.Name = "QuestionTypeLabel";
             this.QuestionTypeLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.QuestionTypeLabel.Size = new System.Drawing.Size(244, 25);
@@ -372,7 +372,7 @@ namespace SpikoDesktop
             this.QuestionCounterSeparator.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.DoubleEdgeFaded;
             this.QuestionCounterSeparator.LineThickness = 2;
             this.QuestionCounterSeparator.Location = new System.Drawing.Point(0, 38);
-            this.QuestionCounterSeparator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.QuestionCounterSeparator.Margin = new System.Windows.Forms.Padding(5);
             this.QuestionCounterSeparator.Name = "QuestionCounterSeparator";
             this.QuestionCounterSeparator.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.QuestionCounterSeparator.Size = new System.Drawing.Size(1285, 17);
@@ -386,7 +386,7 @@ namespace SpikoDesktop
             this.QuestionCounterLabel.CursorType = null;
             this.QuestionCounterLabel.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.QuestionCounterLabel.Location = new System.Drawing.Point(563, 7);
-            this.QuestionCounterLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.QuestionCounterLabel.Margin = new System.Windows.Forms.Padding(4);
             this.QuestionCounterLabel.Name = "QuestionCounterLabel";
             this.QuestionCounterLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.QuestionCounterLabel.Size = new System.Drawing.Size(91, 25);
@@ -407,7 +407,7 @@ namespace SpikoDesktop
             this.QuestionContentPanel.Controls.Add(this.QuestionPicturePanel);
             this.QuestionContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.QuestionContentPanel.Location = new System.Drawing.Point(0, 256);
-            this.QuestionContentPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.QuestionContentPanel.Margin = new System.Windows.Forms.Padding(4);
             this.QuestionContentPanel.Name = "QuestionContentPanel";
             this.QuestionContentPanel.ShowBorders = true;
             this.QuestionContentPanel.Size = new System.Drawing.Size(1285, 474);
@@ -424,7 +424,7 @@ namespace SpikoDesktop
             this.ButtonsPanel.Controls.Add(this.AnswerPanel);
             this.ButtonsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ButtonsPanel.Location = new System.Drawing.Point(0, 39);
-            this.ButtonsPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ButtonsPanel.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonsPanel.Name = "ButtonsPanel";
             this.ButtonsPanel.ShowBorders = true;
             this.ButtonsPanel.Size = new System.Drawing.Size(1285, 435);
@@ -443,7 +443,7 @@ namespace SpikoDesktop
             this.AnswerPanel.BorderThickness = 1;
             this.AnswerPanel.Controls.Add(this.OptionGrid);
             this.AnswerPanel.Location = new System.Drawing.Point(0, 7);
-            this.AnswerPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AnswerPanel.Margin = new System.Windows.Forms.Padding(4);
             this.AnswerPanel.Name = "AnswerPanel";
             this.AnswerPanel.ShowBorders = true;
             this.AnswerPanel.Size = new System.Drawing.Size(1281, 372);
@@ -454,22 +454,22 @@ namespace SpikoDesktop
             this.OptionGrid.AllowCustomTheming = false;
             this.OptionGrid.AllowUserToAddRows = false;
             this.OptionGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.OptionGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.OptionGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.OptionGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.OptionGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.OptionGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OptionGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.OptionGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.OptionGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OptionGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.OptionGrid.ColumnHeadersHeight = 40;
             this.OptionGrid.ColumnHeadersVisible = false;
             this.OptionGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -492,14 +492,14 @@ namespace SpikoDesktop
             this.OptionGrid.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.OptionGrid.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.OptionGrid.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.OptionGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.OptionGrid.DefaultCellStyle = dataGridViewCellStyle9;
             this.OptionGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OptionGrid.EnableHeadersVisualStyles = false;
             this.OptionGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
@@ -507,18 +507,18 @@ namespace SpikoDesktop
             this.OptionGrid.HeaderBgColor = System.Drawing.Color.Empty;
             this.OptionGrid.HeaderForeColor = System.Drawing.Color.White;
             this.OptionGrid.Location = new System.Drawing.Point(0, 0);
-            this.OptionGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OptionGrid.Margin = new System.Windows.Forms.Padding(4);
             this.OptionGrid.Name = "OptionGrid";
             this.OptionGrid.ReadOnly = true;
             this.OptionGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.OptionGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OptionGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.OptionGrid.RowHeadersVisible = false;
             this.OptionGrid.RowHeadersWidth = 51;
             this.OptionGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
@@ -546,7 +546,7 @@ namespace SpikoDesktop
             this.QuestionPicturePanel.Controls.Add(this.txtQuestion);
             this.QuestionPicturePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.QuestionPicturePanel.Location = new System.Drawing.Point(0, 0);
-            this.QuestionPicturePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.QuestionPicturePanel.Margin = new System.Windows.Forms.Padding(4);
             this.QuestionPicturePanel.Name = "QuestionPicturePanel";
             this.QuestionPicturePanel.Size = new System.Drawing.Size(1285, 39);
             this.QuestionPicturePanel.TabIndex = 3;
@@ -555,7 +555,7 @@ namespace SpikoDesktop
             // 
             this.qPicture.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.qPicture.Location = new System.Drawing.Point(0, 33);
-            this.qPicture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.qPicture.Margin = new System.Windows.Forms.Padding(4);
             this.qPicture.Name = "qPicture";
             this.qPicture.Size = new System.Drawing.Size(1264, 98);
             this.qPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -572,7 +572,7 @@ namespace SpikoDesktop
             this.txtQuestion.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtQuestion.ForeColor = System.Drawing.Color.Black;
             this.txtQuestion.Location = new System.Drawing.Point(0, 0);
-            this.txtQuestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQuestion.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuestion.Name = "txtQuestion";
             this.txtQuestion.ReadOnly = true;
             this.txtQuestion.Size = new System.Drawing.Size(1264, 33);
@@ -598,14 +598,14 @@ namespace SpikoDesktop
             this.QuestionControlPanel.Controls.Add(this.SubmitExamButton);
             this.QuestionControlPanel.Controls.Add(this.DirectQuestionButton);
             this.QuestionControlPanel.Controls.Add(this.directQuesTextBox);
-            this.QuestionControlPanel.Controls.Add(this.bunifuLabel1);
+            this.QuestionControlPanel.Controls.Add(this.QueueLabel);
             this.QuestionControlPanel.Controls.Add(this.LastQuestionButton);
             this.QuestionControlPanel.Controls.Add(this.NextQuestionButton);
             this.QuestionControlPanel.Controls.Add(this.PreviousQuestionButton);
             this.QuestionControlPanel.Controls.Add(this.FirstQuestionButton);
             this.QuestionControlPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.QuestionControlPanel.Location = new System.Drawing.Point(0, 672);
-            this.QuestionControlPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.QuestionControlPanel.Margin = new System.Windows.Forms.Padding(4);
             this.QuestionControlPanel.Name = "QuestionControlPanel";
             this.QuestionControlPanel.ShowBorders = true;
             this.QuestionControlPanel.Size = new System.Drawing.Size(1285, 58);
@@ -631,11 +631,11 @@ namespace SpikoDesktop
             this.SubmitExamButton.ColorContrastOnClick = 45;
             this.SubmitExamButton.ColorContrastOnHover = 45;
             this.SubmitExamButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.SubmitExamButton.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.SubmitExamButton.CustomizableEdges = borderEdges3;
             this.SubmitExamButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.SubmitExamButton.DisabledBorderColor = System.Drawing.Color.DodgerBlue;
             this.SubmitExamButton.DisabledFillColor = System.Drawing.Color.DodgerBlue;
@@ -660,7 +660,7 @@ namespace SpikoDesktop
             this.SubmitExamButton.IdleIconRightImage = null;
             this.SubmitExamButton.IndicateFocus = false;
             this.SubmitExamButton.Location = new System.Drawing.Point(16, 11);
-            this.SubmitExamButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SubmitExamButton.Margin = new System.Windows.Forms.Padding(4);
             this.SubmitExamButton.Name = "SubmitExamButton";
             this.SubmitExamButton.OnDisabledState.BorderColor = System.Drawing.Color.DodgerBlue;
             this.SubmitExamButton.OnDisabledState.BorderRadius = 1;
@@ -723,11 +723,11 @@ namespace SpikoDesktop
             this.DirectQuestionButton.ColorContrastOnClick = 45;
             this.DirectQuestionButton.ColorContrastOnHover = 45;
             this.DirectQuestionButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.DirectQuestionButton.CustomizableEdges = borderEdges2;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.DirectQuestionButton.CustomizableEdges = borderEdges4;
             this.DirectQuestionButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.DirectQuestionButton.DisabledBorderColor = System.Drawing.Color.DodgerBlue;
             this.DirectQuestionButton.DisabledFillColor = System.Drawing.Color.DodgerBlue;
@@ -752,7 +752,7 @@ namespace SpikoDesktop
             this.DirectQuestionButton.IdleIconRightImage = null;
             this.DirectQuestionButton.IndicateFocus = false;
             this.DirectQuestionButton.Location = new System.Drawing.Point(703, 20);
-            this.DirectQuestionButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DirectQuestionButton.Margin = new System.Windows.Forms.Padding(4);
             this.DirectQuestionButton.Name = "DirectQuestionButton";
             this.DirectQuestionButton.OnDisabledState.BorderColor = System.Drawing.Color.DodgerBlue;
             this.DirectQuestionButton.OnDisabledState.BorderRadius = 1;
@@ -800,7 +800,7 @@ namespace SpikoDesktop
             this.directQuesTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.directQuesTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.directQuesTextBox.Location = new System.Drawing.Point(652, 20);
-            this.directQuesTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.directQuesTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.directQuesTextBox.Name = "directQuesTextBox";
             this.directQuesTextBox.Size = new System.Drawing.Size(41, 22);
             this.directQuesTextBox.TabIndex = 7;
@@ -808,22 +808,22 @@ namespace SpikoDesktop
             this.directQuesTextBox.Enter += new System.EventHandler(this.dirextQuesTextBox_Enter_1);
             this.directQuesTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.directQuesTextBox_KeyDown);
             // 
-            // bunifuLabel1
+            // QueueLabel
             // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(519, 20);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(103, 25);
-            this.bunifuLabel1.TabIndex = 6;
-            this.bunifuLabel1.Text = "Go to Que #:";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.QueueLabel.AllowParentOverrides = false;
+            this.QueueLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.QueueLabel.AutoEllipsis = false;
+            this.QueueLabel.CursorType = null;
+            this.QueueLabel.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.QueueLabel.Location = new System.Drawing.Point(519, 20);
+            this.QueueLabel.Margin = new System.Windows.Forms.Padding(4);
+            this.QueueLabel.Name = "QueueLabel";
+            this.QueueLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.QueueLabel.Size = new System.Drawing.Size(103, 25);
+            this.QueueLabel.TabIndex = 6;
+            this.QueueLabel.Text = "Go to Que #:";
+            this.QueueLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.QueueLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // LastQuestionButton
             // 
@@ -832,7 +832,7 @@ namespace SpikoDesktop
             this.LastQuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LastQuestionButton.Image = ((System.Drawing.Image)(resources.GetObject("LastQuestionButton.Image")));
             this.LastQuestionButton.Location = new System.Drawing.Point(1228, 11);
-            this.LastQuestionButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LastQuestionButton.Margin = new System.Windows.Forms.Padding(4);
             this.LastQuestionButton.Name = "LastQuestionButton";
             this.LastQuestionButton.Size = new System.Drawing.Size(47, 39);
             this.LastQuestionButton.TabIndex = 3;
@@ -846,7 +846,7 @@ namespace SpikoDesktop
             this.NextQuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NextQuestionButton.Image = ((System.Drawing.Image)(resources.GetObject("NextQuestionButton.Image")));
             this.NextQuestionButton.Location = new System.Drawing.Point(1173, 11);
-            this.NextQuestionButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NextQuestionButton.Margin = new System.Windows.Forms.Padding(4);
             this.NextQuestionButton.Name = "NextQuestionButton";
             this.NextQuestionButton.Size = new System.Drawing.Size(47, 39);
             this.NextQuestionButton.TabIndex = 2;
@@ -860,7 +860,7 @@ namespace SpikoDesktop
             this.PreviousQuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PreviousQuestionButton.Image = ((System.Drawing.Image)(resources.GetObject("PreviousQuestionButton.Image")));
             this.PreviousQuestionButton.Location = new System.Drawing.Point(1119, 11);
-            this.PreviousQuestionButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PreviousQuestionButton.Margin = new System.Windows.Forms.Padding(4);
             this.PreviousQuestionButton.Name = "PreviousQuestionButton";
             this.PreviousQuestionButton.Size = new System.Drawing.Size(47, 39);
             this.PreviousQuestionButton.TabIndex = 1;
@@ -874,7 +874,7 @@ namespace SpikoDesktop
             this.FirstQuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FirstQuestionButton.Image = ((System.Drawing.Image)(resources.GetObject("FirstQuestionButton.Image")));
             this.FirstQuestionButton.Location = new System.Drawing.Point(1064, 11);
-            this.FirstQuestionButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FirstQuestionButton.Margin = new System.Windows.Forms.Padding(4);
             this.FirstQuestionButton.Name = "FirstQuestionButton";
             this.FirstQuestionButton.Size = new System.Drawing.Size(47, 39);
             this.FirstQuestionButton.TabIndex = 0;
@@ -909,26 +909,26 @@ namespace SpikoDesktop
             this.TotalQuestionsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TotalQuestionsGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.TotalQuestionsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TotalQuestionsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TotalQuestionsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.TotalQuestionsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TotalQuestionsGrid.ColumnHeadersVisible = false;
             this.TotalQuestionsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TotalQuestionsGrid.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TotalQuestionsGrid.DefaultCellStyle = dataGridViewCellStyle12;
             this.TotalQuestionsGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TotalQuestionsGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
             this.TotalQuestionsGrid.Location = new System.Drawing.Point(0, 28);
@@ -960,7 +960,7 @@ namespace SpikoDesktop
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
             this.bunifuLabel2.Location = new System.Drawing.Point(0, 0);
-            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(1285, 28);
@@ -1001,7 +1001,7 @@ namespace SpikoDesktop
             this.Controls.Add(this.TitlePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuestionsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuestionsForm";
@@ -1051,7 +1051,7 @@ namespace SpikoDesktop
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton SubmitExamButton;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton DirectQuestionButton;
         private System.Windows.Forms.TextBox directQuesTextBox;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel QueueLabel;
         private System.Windows.Forms.Button LastQuestionButton;
         private System.Windows.Forms.Button NextQuestionButton;
         private System.Windows.Forms.Button PreviousQuestionButton;
@@ -1067,7 +1067,7 @@ namespace SpikoDesktop
         private Bunifu.UI.WinForms.BunifuDataGridView OptionGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn OptionsColumn;
         private Bunifu.UI.WinForms.BunifuLabel qMarks;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
+        private Bunifu.UI.WinForms.BunifuLabel MarkesLabel;
         private System.Windows.Forms.Label QuesInfoLabel;
         private System.Windows.Forms.Timer monitoringTimer;
         private System.Windows.Forms.Label WifiStatusLabel;
