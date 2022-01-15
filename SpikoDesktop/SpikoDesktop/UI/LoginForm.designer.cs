@@ -60,7 +60,6 @@ namespace SpikoDesktop
             this.LogoTitle = new Bunifu.UI.WinForms.BunifuLabel();
             this.LogoPictureBox = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            //this.progressBar1 = new SpikoDesktop.ProgressBar();
             this.LoginContentPanel.SuspendLayout();
             this.ControlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
@@ -124,7 +123,8 @@ namespace SpikoDesktop
             this.LoginButton.IdleIconLeftImage = null;
             this.LoginButton.IdleIconRightImage = null;
             this.LoginButton.IndicateFocus = false;
-            this.LoginButton.Location = new System.Drawing.Point(30, 472);
+            this.LoginButton.Location = new System.Drawing.Point(40, 581);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(4);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.OnDisabledState.BorderColor = System.Drawing.Color.DodgerBlue;
             this.LoginButton.OnDisabledState.BorderRadius = 1;
@@ -158,7 +158,7 @@ namespace SpikoDesktop
             this.LoginButton.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.LoginButton.OnPressedState.IconLeftImage = null;
             this.LoginButton.OnPressedState.IconRightImage = null;
-            this.LoginButton.Size = new System.Drawing.Size(292, 39);
+            this.LoginButton.Size = new System.Drawing.Size(389, 48);
             this.LoginButton.TabIndex = 10;
             this.LoginButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LoginButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -190,22 +190,23 @@ namespace SpikoDesktop
             this.LoginContentPanel.Controls.Add(this.LogoPictureBox);
             this.LoginContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LoginContentPanel.Location = new System.Drawing.Point(0, 0);
-            this.LoginContentPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.LoginContentPanel.Margin = new System.Windows.Forms.Padding(5);
             this.LoginContentPanel.Name = "LoginContentPanel";
             this.LoginContentPanel.ShowBorders = true;
-            this.LoginContentPanel.Size = new System.Drawing.Size(349, 569);
+            this.LoginContentPanel.Size = new System.Drawing.Size(465, 700);
             this.LoginContentPanel.TabIndex = 9;
-            this.LoginContentPanel.Click += new System.EventHandler(this.LoginContentPanel_Click);
             this.LoginContentPanel.VisibleChanged += new System.EventHandler(this.LoginContentPanel_VisibleChanged);
+            this.LoginContentPanel.Click += new System.EventHandler(this.LoginContentPanel_Click);
             // 
             // baseUrlLabel
             // 
             this.baseUrlLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.baseUrlLabel.AutoSize = true;
             this.baseUrlLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baseUrlLabel.Location = new System.Drawing.Point(6, 535);
+            this.baseUrlLabel.Location = new System.Drawing.Point(8, 658);
+            this.baseUrlLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.baseUrlLabel.Name = "baseUrlLabel";
-            this.baseUrlLabel.Size = new System.Drawing.Size(89, 25);
+            this.baseUrlLabel.Size = new System.Drawing.Size(112, 32);
             this.baseUrlLabel.TabIndex = 19;
             this.baseUrlLabel.Text = "Base URL";
             // 
@@ -213,9 +214,10 @@ namespace SpikoDesktop
             // 
             this.progressBar2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.progressBar2.BackColor = System.Drawing.Color.White;
-            this.progressBar2.Location = new System.Drawing.Point(11, 222);
+            this.progressBar2.Location = new System.Drawing.Point(14, 219);
+            this.progressBar2.Margin = new System.Windows.Forms.Padding(5);
             this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(326, 124);
+            this.progressBar2.Size = new System.Drawing.Size(435, 153);
             this.progressBar2.TabIndex = 18;
             // 
             // checkBoxLabel
@@ -223,9 +225,10 @@ namespace SpikoDesktop
             this.checkBoxLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxLabel.AutoSize = true;
             this.checkBoxLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxLabel.Location = new System.Drawing.Point(302, 427);
+            this.checkBoxLabel.Location = new System.Drawing.Point(403, 526);
+            this.checkBoxLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.checkBoxLabel.Name = "checkBoxLabel";
-            this.checkBoxLabel.Size = new System.Drawing.Size(36, 13);
+            this.checkBoxLabel.Size = new System.Drawing.Size(42, 19);
             this.checkBoxLabel.TabIndex = 17;
             this.checkBoxLabel.Text = "Show";
             this.checkBoxLabel.Click += new System.EventHandler(this.checkBoxLabel_Click);
@@ -249,8 +252,9 @@ namespace SpikoDesktop
             this.showPassCheckbox.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.showPassCheckbox.Cursor = System.Windows.Forms.Cursors.Default;
             this.showPassCheckbox.CustomCheckmarkImage = null;
-            this.showPassCheckbox.Location = new System.Drawing.Point(278, 422);
-            this.showPassCheckbox.MinimumSize = new System.Drawing.Size(17, 17);
+            this.showPassCheckbox.Location = new System.Drawing.Point(371, 519);
+            this.showPassCheckbox.Margin = new System.Windows.Forms.Padding(4);
+            this.showPassCheckbox.MinimumSize = new System.Drawing.Size(23, 21);
             this.showPassCheckbox.Name = "showPassCheckbox";
             this.showPassCheckbox.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
             this.showPassCheckbox.OnCheck.BorderRadius = 9;
@@ -278,7 +282,7 @@ namespace SpikoDesktop
             this.showPassCheckbox.OnUncheck.BorderRadius = 9;
             this.showPassCheckbox.OnUncheck.BorderThickness = 1;
             this.showPassCheckbox.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.showPassCheckbox.Size = new System.Drawing.Size(21, 21);
+            this.showPassCheckbox.Size = new System.Drawing.Size(28, 28);
             this.showPassCheckbox.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.showPassCheckbox.TabIndex = 16;
             this.showPassCheckbox.ThreeState = false;
@@ -291,12 +295,13 @@ namespace SpikoDesktop
             this.CrdentialsLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CrdentialsLabel.AutoEllipsis = false;
             this.CrdentialsLabel.CursorType = null;
-            this.CrdentialsLabel.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.CrdentialsLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CrdentialsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.CrdentialsLabel.Location = new System.Drawing.Point(113, 433);
+            this.CrdentialsLabel.Location = new System.Drawing.Point(151, 533);
+            this.CrdentialsLabel.Margin = new System.Windows.Forms.Padding(4);
             this.CrdentialsLabel.Name = "CrdentialsLabel";
             this.CrdentialsLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CrdentialsLabel.Size = new System.Drawing.Size(131, 20);
+            this.CrdentialsLabel.Size = new System.Drawing.Size(176, 28);
             this.CrdentialsLabel.TabIndex = 14;
             this.CrdentialsLabel.Text = "Wrong Crdentials !!!";
             this.CrdentialsLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -318,7 +323,7 @@ namespace SpikoDesktop
             this.ControlPanel.Margin = new System.Windows.Forms.Padding(0);
             this.ControlPanel.Name = "ControlPanel";
             this.ControlPanel.ShowBorders = true;
-            this.ControlPanel.Size = new System.Drawing.Size(349, 44);
+            this.ControlPanel.Size = new System.Drawing.Size(465, 54);
             this.ControlPanel.TabIndex = 13;
             this.ControlPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ControlPanel_MouseDown);
             // 
@@ -328,9 +333,10 @@ namespace SpikoDesktop
             this.MaximizeButton.FlatAppearance.BorderSize = 0;
             this.MaximizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MaximizeButton.Image = ((System.Drawing.Image)(resources.GetObject("MaximizeButton.Image")));
-            this.MaximizeButton.Location = new System.Drawing.Point(256, -1);
+            this.MaximizeButton.Location = new System.Drawing.Point(341, -1);
+            this.MaximizeButton.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeButton.Name = "MaximizeButton";
-            this.MaximizeButton.Size = new System.Drawing.Size(43, 42);
+            this.MaximizeButton.Size = new System.Drawing.Size(57, 52);
             this.MaximizeButton.TabIndex = 11;
             this.MaximizeButton.UseVisualStyleBackColor = true;
             this.MaximizeButton.Click += new System.EventHandler(this.MaximizeButton_Click);
@@ -341,9 +347,10 @@ namespace SpikoDesktop
             this.MinimizeButton.FlatAppearance.BorderSize = 0;
             this.MinimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MinimizeButton.Image = ((System.Drawing.Image)(resources.GetObject("MinimizeButton.Image")));
-            this.MinimizeButton.Location = new System.Drawing.Point(207, -1);
+            this.MinimizeButton.Location = new System.Drawing.Point(276, -1);
+            this.MinimizeButton.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeButton.Name = "MinimizeButton";
-            this.MinimizeButton.Size = new System.Drawing.Size(43, 42);
+            this.MinimizeButton.Size = new System.Drawing.Size(57, 52);
             this.MinimizeButton.TabIndex = 12;
             this.MinimizeButton.UseVisualStyleBackColor = true;
             this.MinimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
@@ -355,9 +362,10 @@ namespace SpikoDesktop
             this.CloseButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseButton.Image = ((System.Drawing.Image)(resources.GetObject("CloseButton.Image")));
-            this.CloseButton.Location = new System.Drawing.Point(305, -1);
+            this.CloseButton.Location = new System.Drawing.Point(407, -1);
+            this.CloseButton.Margin = new System.Windows.Forms.Padding(4);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(43, 42);
+            this.CloseButton.Size = new System.Drawing.Size(57, 52);
             this.CloseButton.TabIndex = 6;
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
@@ -370,10 +378,11 @@ namespace SpikoDesktop
             this.PasswordCredentialLabel.CursorType = null;
             this.PasswordCredentialLabel.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.PasswordCredentialLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.PasswordCredentialLabel.Location = new System.Drawing.Point(42, 423);
+            this.PasswordCredentialLabel.Location = new System.Drawing.Point(56, 521);
+            this.PasswordCredentialLabel.Margin = new System.Windows.Forms.Padding(4);
             this.PasswordCredentialLabel.Name = "PasswordCredentialLabel";
             this.PasswordCredentialLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.PasswordCredentialLabel.Size = new System.Drawing.Size(202, 20);
+            this.PasswordCredentialLabel.Size = new System.Drawing.Size(241, 25);
             this.PasswordCredentialLabel.TabIndex = 9;
             this.PasswordCredentialLabel.Text = "The Password field is Required";
             this.PasswordCredentialLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -388,10 +397,11 @@ namespace SpikoDesktop
             this.EmailCredentialLabel.CursorType = System.Windows.Forms.Cursors.Default;
             this.EmailCredentialLabel.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.EmailCredentialLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.EmailCredentialLabel.Location = new System.Drawing.Point(42, 337);
+            this.EmailCredentialLabel.Location = new System.Drawing.Point(56, 415);
+            this.EmailCredentialLabel.Margin = new System.Windows.Forms.Padding(4);
             this.EmailCredentialLabel.Name = "EmailCredentialLabel";
             this.EmailCredentialLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.EmailCredentialLabel.Size = new System.Drawing.Size(177, 20);
+            this.EmailCredentialLabel.Size = new System.Drawing.Size(207, 25);
             this.EmailCredentialLabel.TabIndex = 8;
             this.EmailCredentialLabel.Text = "The Email field is Required";
             this.EmailCredentialLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -426,7 +436,8 @@ namespace SpikoDesktop
             this.txtPassword.IconRight = null;
             this.txtPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Lines = new string[0];
-            this.txtPassword.Location = new System.Drawing.Point(30, 373);
+            this.txtPassword.Location = new System.Drawing.Point(40, 459);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPassword.Modified = false;
@@ -452,7 +463,7 @@ namespace SpikoDesktop
             stateProperties4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtPassword.OnIdleState = stateProperties4;
-            this.txtPassword.Padding = new System.Windows.Forms.Padding(3);
+            this.txtPassword.Padding = new System.Windows.Forms.Padding(4);
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtPassword.PlaceholderText = "Password";
@@ -462,7 +473,7 @@ namespace SpikoDesktop
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.ShortcutsEnabled = true;
-            this.txtPassword.Size = new System.Drawing.Size(292, 44);
+            this.txtPassword.Size = new System.Drawing.Size(389, 54);
             this.txtPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPassword.TabIndex = 7;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -506,7 +517,8 @@ namespace SpikoDesktop
             this.txtEmail.IconRight = null;
             this.txtEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(30, 287);
+            this.txtEmail.Location = new System.Drawing.Point(40, 353);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtEmail.Modified = false;
@@ -532,7 +544,7 @@ namespace SpikoDesktop
             stateProperties8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtEmail.OnIdleState = stateProperties8;
-            this.txtEmail.Padding = new System.Windows.Forms.Padding(3);
+            this.txtEmail.Padding = new System.Windows.Forms.Padding(4);
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtEmail.PlaceholderText = "Email";
@@ -542,7 +554,7 @@ namespace SpikoDesktop
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.ShortcutsEnabled = true;
-            this.txtEmail.Size = new System.Drawing.Size(292, 44);
+            this.txtEmail.Size = new System.Drawing.Size(389, 54);
             this.txtEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtEmail.TabIndex = 5;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -566,10 +578,11 @@ namespace SpikoDesktop
             this.LogoTitle.CursorType = System.Windows.Forms.Cursors.Default;
             this.LogoTitle.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.LogoTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.LogoTitle.Location = new System.Drawing.Point(85, 224);
+            this.LogoTitle.Location = new System.Drawing.Point(113, 276);
+            this.LogoTitle.Margin = new System.Windows.Forms.Padding(4);
             this.LogoTitle.Name = "LogoTitle";
             this.LogoTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LogoTitle.Size = new System.Drawing.Size(171, 20);
+            this.LogoTitle.Size = new System.Drawing.Size(204, 25);
             this.LogoTitle.TabIndex = 4;
             this.LogoTitle.Text = "Eduko Online Exam Portal";
             this.LogoTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -580,13 +593,13 @@ namespace SpikoDesktop
             this.LogoPictureBox.AllowFocused = false;
             this.LogoPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LogoPictureBox.AutoSizeHeight = true;
-            this.LogoPictureBox.BorderRadius = 85;
+            this.LogoPictureBox.BorderRadius = 114;
             this.LogoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("LogoPictureBox.Image")));
             this.LogoPictureBox.IsCircle = true;
-            this.LogoPictureBox.Location = new System.Drawing.Point(85, 47);
-            this.LogoPictureBox.Margin = new System.Windows.Forms.Padding(4);
+            this.LogoPictureBox.Location = new System.Drawing.Point(113, 58);
+            this.LogoPictureBox.Margin = new System.Windows.Forms.Padding(5);
             this.LogoPictureBox.Name = "LogoPictureBox";
-            this.LogoPictureBox.Size = new System.Drawing.Size(171, 171);
+            this.LogoPictureBox.Size = new System.Drawing.Size(228, 228);
             this.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LogoPictureBox.TabIndex = 3;
             this.LogoPictureBox.TabStop = false;
@@ -594,14 +607,14 @@ namespace SpikoDesktop
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(349, 569);
+            this.ClientSize = new System.Drawing.Size(465, 700);
             this.Controls.Add(this.LoginContentPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form";

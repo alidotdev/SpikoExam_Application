@@ -42,12 +42,12 @@ namespace SpikoDesktop.Models
                 //MessageBox.Show("keys[1] : " + keys[1]);
                 c.setValue(keys[0], keys[1]);
             }
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
-            if (File.Exists("log.txt"))
-            {
-                File.Delete("log.txt");
-            }
+            //GC.Collect();
+            //GC.WaitForPendingFinalizers();
+            //if (File.Exists("log.txt"))
+            //{
+            //    File.Delete("log.txt");
+            //}
         }
 
         public void CreatTemplate()
@@ -55,9 +55,10 @@ namespace SpikoDesktop.Models
             Configuration c = Configuration.getInstance();
             string path = @"../../../Program Files/ConfigurationData.txt";
             c.setValue("SavingPath", @"../../../Program Files/");
-            c.setValue("BaseUrl", "http://exam.spikotech.com/");
+            c.setValue("BaseUrl", "http://182.180.162.103:8090/");
             c.setValue("UsersBasePath",@"../../Users/");
 
+            //c.setValue("BaseUrl", "http://exam.spikotech.com/");
             //MessageBox.Show("I am creating file of configuration");
 
             for (int i = 0; i < c.data.Count; i++)

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SpikoDesktop.Utility
 {
@@ -40,6 +41,7 @@ namespace SpikoDesktop.Utility
 
         public void LogoutUser()
         {
+            //MessageBox.Show("Logout user called");
             Services.LoginWebService.GetService().Token = null;
             ProfileUtility p = ProfileUtility.GetInstance();
             string[] files = { "Token.txt", p.currentUserPath + "Token.txt" };
@@ -51,9 +53,9 @@ namespace SpikoDesktop.Utility
                 }
             }
             p.currentProfile = null;
-            AttemptExamUtility.GetInstance().listOfExams = null;
-            List<Questions> q = QuestionUtil.GetInstance().GetQList();
-            q = null;
+            //AttemptExamUtility.GetInstance().listOfExams = null;
+            //List<Questions> q = QuestionUtil.GetInstance().GetQList();
+            //q = null;
         }
     }
 }

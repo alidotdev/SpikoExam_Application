@@ -136,14 +136,16 @@ namespace SpikoDesktop
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show("Logout Button Clicked");
             //empty the token
             LoginUtility.GetLoginUtility().LogoutUser();
-
+            //MessageBox.Show("User is logged Out");
 
             //token is emptied
             
             this.Hide();
-            LoginForm.GetInstace().Show();
+
+            LoginForm.GetInstace().Visible = true;
 
             Logger.log.Info("User has been logged out.");
         }

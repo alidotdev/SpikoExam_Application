@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SpikoDesktop.Utility
 {
@@ -19,6 +20,7 @@ namespace SpikoDesktop.Utility
             set
             {
                 _currentProfile = value;
+                //MessageBox.Show(value.ToString()+ "\n"+value.UserName);
                 if (_currentProfile == null)
                 {
                     currentUserPath = null;

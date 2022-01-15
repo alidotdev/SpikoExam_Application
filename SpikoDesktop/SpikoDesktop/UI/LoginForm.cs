@@ -22,18 +22,21 @@ namespace SpikoDesktop
         SpeechSynthesizer synth = new SpeechSynthesizer();
         public static LoginForm GetInstace()
         {
+            
             if (_instance == null)
             {
 
                 _instance = new LoginForm();
-            }
 
+            }
+            
             _instance.txtEmail.Focus();
 
             return _instance;
         }
         private LoginForm()
         {
+            InitializeComponent();
             NetworkChange.NetworkAvailabilityChanged += new NetworkAvailabilityChangedEventHandler((sender, e) => AvailabilityChangedCallback(sender, e));
             ConfigurationHardCode f = new ConfigurationHardCode();
             f.BasicTemplateChecker();
@@ -41,7 +44,6 @@ namespace SpikoDesktop
 
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
 
-            InitializeComponent();
             string baseUrl = Configuration.getInstance().getValue("BaseUrl");
             //MessageBox.Show("1...." + baseUrl);
             baseUrlLabel.Text = baseUrl;
@@ -205,7 +207,7 @@ namespace SpikoDesktop
                 else
                 {
                     bool flag = false;
-                    MessageBox.Show("Internet is off");
+                    //MessageBox.Show("Internet is off");
                     DirectoryInfo folderInWichToSearch = new DirectoryInfo(Configuration.getInstance().getValue("UsersBasePath"));
                     FileSystemInfo[] filesAndDirs = folderInWichToSearch.GetFileSystemInfos("*");
 
@@ -215,7 +217,7 @@ namespace SpikoDesktop
                         {
                             p.currentProfile = ProfileService.GetInstance().GetProfile(txtEmail.Text.ToLower());
                             flag = true;
-                            MessageBox.Show("Folder is found");
+                            //MessageBox.Show("Folder is found");
                             if (p.currentProfile.UserRole == "Student")
                             {
                                 NormalWorking();
@@ -273,10 +275,11 @@ namespace SpikoDesktop
                 }
                 this.Hide();
 
+                Logger.log.Info("Showing DashBoard Form");
                 Dashboard2.GetInstance().Show();
+                
 
                 //new QuestionsForm().Show();
-                Logger.log.Info("Showing question form");
 
 
             }
