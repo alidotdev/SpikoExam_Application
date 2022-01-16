@@ -45,7 +45,6 @@ namespace SpikoDesktop
             this.LoginButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.LoginContentPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.baseUrlLabel = new System.Windows.Forms.Label();
-            this.progressBar2 = new SpikoDesktop.ProgressBar();
             this.checkBoxLabel = new System.Windows.Forms.Label();
             this.showPassCheckbox = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.CrdentialsLabel = new Bunifu.UI.WinForms.BunifuLabel();
@@ -60,6 +59,7 @@ namespace SpikoDesktop
             this.LogoTitle = new Bunifu.UI.WinForms.BunifuLabel();
             this.LogoPictureBox = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.progressBar2 = new SpikoDesktop.ProgressBar();
             this.LoginContentPanel.SuspendLayout();
             this.ControlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
@@ -210,16 +210,6 @@ namespace SpikoDesktop
             this.baseUrlLabel.TabIndex = 19;
             this.baseUrlLabel.Text = "Base URL";
             // 
-            // progressBar2
-            // 
-            this.progressBar2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.progressBar2.BackColor = System.Drawing.Color.White;
-            this.progressBar2.Location = new System.Drawing.Point(14, 219);
-            this.progressBar2.Margin = new System.Windows.Forms.Padding(5);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(435, 153);
-            this.progressBar2.TabIndex = 18;
-            // 
             // checkBoxLabel
             // 
             this.checkBoxLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -301,9 +291,9 @@ namespace SpikoDesktop
             this.CrdentialsLabel.Margin = new System.Windows.Forms.Padding(4);
             this.CrdentialsLabel.Name = "CrdentialsLabel";
             this.CrdentialsLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CrdentialsLabel.Size = new System.Drawing.Size(176, 28);
+            this.CrdentialsLabel.Size = new System.Drawing.Size(178, 28);
             this.CrdentialsLabel.TabIndex = 14;
-            this.CrdentialsLabel.Text = "Wrong Crdentials !!!";
+            this.CrdentialsLabel.Text = "Wrong Credential !!!";
             this.CrdentialsLabel.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.CrdentialsLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -604,6 +594,16 @@ namespace SpikoDesktop
             this.LogoPictureBox.TabIndex = 3;
             this.LogoPictureBox.TabStop = false;
             this.LogoPictureBox.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.progressBar2.BackColor = System.Drawing.Color.White;
+            this.progressBar2.Location = new System.Drawing.Point(14, 219);
+            this.progressBar2.Margin = new System.Windows.Forms.Padding(5);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(435, 153);
+            this.progressBar2.TabIndex = 18;
             // 
             // LoginForm
             // 
