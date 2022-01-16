@@ -32,12 +32,12 @@ namespace SpikoDesktop.Models
             string data = File.ReadAllText(@"../../../Program Files/ConfigurationData.txt");
             //MessageBox.Show("Data from txt file "+data);
             string[] allData = data.Split('\n');
-            //MessageBox.Show("Count of constants : "+allData.Length);
-            for (int i = 0; i < allData.Length -1; i++)
+            //MessageBox.Show("Count of constants : " + allData.Length);
+            for (int i = 0; i < allData.Length ; i++)
             {
                 //MessageBox.Show(allData[i]);
                 string[] keys = allData[i].Split(',');
-                //MessageBox.Show(keys+"");
+                //MessageBox.Show(keys + "");
                 //MessageBox.Show("keys[0] : " + keys[0]);
                 //MessageBox.Show("keys[1] : " + keys[1]);
                 c.setValue(keys[0], keys[1]);
@@ -55,8 +55,8 @@ namespace SpikoDesktop.Models
             Configuration c = Configuration.getInstance();
             string path = @"../../../Program Files/ConfigurationData.txt";
             c.setValue("SavingPath", @"../../../Program Files/");
-            c.setValue("BaseUrl", "http://182.180.162.103:8090/");
-            c.setValue("UsersBasePath",@"../../Users/");
+            c.setValue("BaseUrl", "http://exako.spikotech.com/");
+            c.setValue("UsersBasePath", @"../../Users/");
 
             //c.setValue("BaseUrl", "http://exam.spikotech.com/");
             //MessageBox.Show("I am creating file of configuration");

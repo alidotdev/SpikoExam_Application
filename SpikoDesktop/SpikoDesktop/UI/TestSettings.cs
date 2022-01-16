@@ -90,14 +90,15 @@ namespace SpikoDesktop
                 writer.WriteLine(filterInfoCollection[cboCamera.SelectedIndex].MonikerString);
                 writer.Close();
 
-                
-                if (f == null)
-                    DashboardForm.GetInstance().Show();
-                else 
-                    f.Show();
-                f.WindowState = FormWindowState.Maximized;
                 this.Hide();
-                loading.Hide();
+                Dashboard2.GetInstance().Show();
+                //if (f == null)
+
+                //else 
+                //    f.Show();
+                //f.WindowState = FormWindowState.Maximized;
+                //this.Hide();
+                //loading.Hide();
 
             }
         }

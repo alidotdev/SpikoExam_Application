@@ -121,7 +121,7 @@ namespace SpikoDesktop
                 //string text = File.ReadAllText(ProfileUtility.GetInstance().currentUserPath + "Answers.json");
                 string text = File.ReadAllText(filename);
                 AnswerModel loadedAnswers = Crypto.DeserializeJsonObject<AnswerModel>(text);
-                MessageBox.Show("Answres after loading from file : "+ loadedAnswers);
+                //MessageBox.Show("Answres after loading from file : "+ loadedAnswers);
                 if (answers.Id == loadedAnswers.Id)
                 {
                     answers = loadedAnswers;

@@ -20,26 +20,41 @@ namespace SpikoDesktop
         [STAThread]
         static void Main()
         {
-            log4net.Config.XmlConfigurator.Configure();
+            try
+            {
+                log4net.Config.XmlConfigurator.Configure();
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(true);
-            //Configuration.getInstance().LoadConfiguration();
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(true);
+                //Configuration.getInstance().LoadConfiguration();
 
-            //Configuration.getInstance().setValue("BaseUrl","http://exam.spikotech.com/");
-            //Configuration.getInstance().setValue("SavingPath", @"..\..\..\Program Files\");
-            //Configuration.getInstance().setValue("Instruction", File.ReadAllText(@"..\..\..\Program Files\Instructions.txt"));
+                //Configuration.getInstance().setValue("BaseUrl","http://exam.spikotech.com/");
+                //Configuration.getInstance().setValue("SavingPath", @"..\..\..\Program Files\");
+                //Configuration.getInstance().setValue("Instruction", File.ReadAllText(@"..\..\..\Program Files\Instructions.txt"));
 
-            //Configuration.getInstance().SaveConfiguration();
+                //Configuration.getInstance().SaveConfiguration();
 
-            //Application.Run(new Dashboard2());
-            //Application.Run(new DashboardForm());
-            Application.Run(LoginForm.GetInstace());
-            //Application.Run(Dashboard2.GetInstance());
-            //Application.Run(TestSettings.GetInstance());
-            //Application.Run(new QuestionsForm());
-            //Application.Run(new Instructions());
-            //Application.Run(new Rough());
+                //Application.Run(new Dashboard2());
+                //Application.Run(new DashboardForm());
+                Application.Run(LoginForm.GetInstace());
+                //Application.Run(Dashboard2.GetInstance());
+                //Application.Run(TestSettings.GetInstance());
+                //Application.Run(new QuestionsForm());
+                //Application.Run(new Instructions());
+                //Application.Run(new Rough());
+            }
+
+            catch (Exception ex)
+            {
+                //Write ex.Message to a file
+                using (StreamWriter outfile = new StreamWriter(@".\error.txt"))
+                {
+                    outfile.Write(ex.Message.ToString());
+                }
+            }
         }
+
+
     }
 }
+

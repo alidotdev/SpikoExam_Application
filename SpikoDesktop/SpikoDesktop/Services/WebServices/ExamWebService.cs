@@ -33,6 +33,7 @@ namespace SpikoDesktop.Services.WebServices
             //MessageBox.Show("Response Content \n" + response.Content);
             List<Exam> e = Crypto.DeserializeJsonObject<List<Exam>>(response.Content);
             //MessageBox.Show("List Count"+e.Count);
+            //MessageBox.Show("USers base path : "+ Configuration.getInstance().getValue("UsersBasePath") + " User name : "+username);
             File.Delete(@Configuration.getInstance().getValue("UsersBasePath") + @"\" + @username + @"\Exam.txt");
             for (int i = 0; i < e.Count; i++)
             {

@@ -31,6 +31,7 @@ namespace SpikoDesktop.UI
             * 2 = submitted
             * 3 = expired
             */
+
             switch (e.Status)
             {
                 case 0:
