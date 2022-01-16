@@ -1,3 +1,0 @@
-SavingPath,../../../Program Files/
-BaseUrl,http://exako.spikotech.com/
-UsersBasePath,../../Users/
