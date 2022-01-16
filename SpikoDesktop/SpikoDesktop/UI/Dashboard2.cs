@@ -184,23 +184,38 @@ namespace SpikoDesktop
 
         private void btnExams_Click(object sender, EventArgs e)
         {
+            if(MonitoringUtil.GetInstance().NetworkConnectionDetector())
+            {
+                ActivateButton((Button)sender, new UserExamControl());
+            }
+            else
+            {
+                MessageBox.Show("Please Check your internet connection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show();
+            }
             //pnlMain.Dispose();
-            ActivateButton((Button)sender, new UserExamControl());
-           // //pnlExams.Visible = !pnlExams.Visible;
-           // UserExamControl ec = new UserExamControl();
-           // ec.Dock = DockStyle.Fill;
-           // UserExams e1 = new UserExams() { TopLevel = false, TopMost = true };
-           //// e1.FormBorderStyle = FormBorderStyle.None;
-           // //ec.BringToFront();
-           // //ec.Visible = true;
-           // //pnlMain.Controls.Add(ec);
-           // //ec.Show();
+            // //pnlExams.Visible = !pnlExams.Visible;
+            // UserExamControl ec = new UserExamControl();
+            // ec.Dock = DockStyle.Fill;
+            // UserExams e1 = new UserExams() { TopLevel = false, TopMost = true };
+            //// e1.FormBorderStyle = FormBorderStyle.None;
+            // //ec.BringToFront();
+            // //ec.Visible = true;
+            // //pnlMain.Controls.Add(ec);
+            // //ec.Show();
 
         }
 
         private void btnCameraSettings_Click(object sender, EventArgs e)
         {
-            ActivateButton((Button)sender, null);
+            if (MonitoringUtil.GetInstance().NetworkConnectionDetector())
+            {
+                ActivateButton((Button)sender, null);
+            }
+            else
+            {
+                MessageBox.Show("Check your internet connection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)

@@ -194,7 +194,7 @@ namespace SpikoDesktop
                         }
                         else
                         {
-                            MessageBox.Show("Only Students can login to this application");
+                            MessageBox.Show("Only students can login to this application.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             ClearingCredentials();
                         }
                     }
@@ -225,7 +225,7 @@ namespace SpikoDesktop
                             }
                             else
                             {
-                                MessageBox.Show("Only students can login to this page.");
+                                MessageBox.Show("Only students can login to this application.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 ClearingCredentials();
                             }
                         }
@@ -233,7 +233,7 @@ namespace SpikoDesktop
                     }
                     if (flag == false)
                     {
-                        MessageBox.Show("Please check your Internet Connection");
+                        MessageBox.Show("Check your internet connection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         ClearingCredentials();
                     }
                 }

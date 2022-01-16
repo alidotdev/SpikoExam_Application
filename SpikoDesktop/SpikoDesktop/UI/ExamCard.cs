@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SpikoDesktop.Services;
+using SpikoDesktop.Utility;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +31,6 @@ namespace SpikoDesktop.UI
             * 2 = submitted
             * 3 = expired
             */
-
             switch (e.Status)
             {
                 case 0:
@@ -50,10 +51,21 @@ namespace SpikoDesktop.UI
 
         private void btnAction_Click(object sender, EventArgs e)
         {
-            Utility.AttemptExamUtility.GetInstance().MakeReadyExam(id);
-            Instructions.GetInstance().Show();
-            //*************************************************
-            dashboard.Hide();
+            Logger.log.Info("Exam Starting button clicked");
+            if (MonitoringUtil.GetInstance().NetworkConnectionDetector())
+            {
+                Utility.AttemptExamUtility.GetInstance().MakeReadyExam(id);
+                Logger.log.Info("Instruction page is going to show for exam starting.");
+                Instructions.GetInstance().Show();
+                //*************************************************
+                dashboard.Hide();
+            }
+            else
+            {
+                Logger.log.Info("Exam could be started due to internet connection disability.");
+                MessageBox.Show("Please check your Internet Connection");
+            }
+            
         }
     }
 }

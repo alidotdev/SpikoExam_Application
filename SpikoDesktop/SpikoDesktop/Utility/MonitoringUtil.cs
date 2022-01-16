@@ -467,7 +467,8 @@ namespace SpikoDesktop.Utility
             {
                 using (var client = new WebClient())
                 using (client.OpenRead("http://google.com/generate_204"))
-                    return true;
+
+                return true;
             }
             catch
             {
